@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shop_sphere/core/routing/app_router.dart';
+
 class ShopSphere extends StatelessWidget {
-  const ShopSphere({super.key});
+  final AppRouter router;
+
+  const ShopSphere({super.key, required this.router});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: router.router,
+    );
   }
 }
