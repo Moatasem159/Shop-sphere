@@ -34,6 +34,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   fonts:
+     - family: NavigationBarIcon
+       fonts:
+        - asset: assets/fonts/icons/NavigationBarIcon.ttf
      - family: DM-sans
        fonts:
          - asset: assets/fonts/dm-sans/DMSans-Thin.ttf
