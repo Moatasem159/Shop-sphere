@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
 class AppFontFamily {
   const AppFontFamily._();
-  static const String dmSans = 'DMSans';
+
+  static const String dmSans = 'DM-sans';
 }
+
 class AppTextStyles {
   const AppTextStyles._();
 
