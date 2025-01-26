@@ -28,7 +28,7 @@ class OnBoardingRoute extends GoRouteData {
         key: state.pageKey,
         name: state.name,
         arguments: state.extra,
-        direction: SlideDirection.right,
+        direction: SlideDirection.left,
         child: OnboardingScreen(),
       );
 }

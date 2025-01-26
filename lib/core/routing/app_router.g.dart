@@ -8,6 +8,7 @@ part of 'app_router.dart';
 
 List<RouteBase> get $appRoutes => [
       $splashRoute,
+      $onBoardingRoute,
     ];
 
 RouteBase get $splashRoute => GoRouteData.$route(
@@ -20,6 +21,28 @@ extension $SplashRouteExtension on SplashRoute {
 
   String get location => GoRouteData.$location(
         '/',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+RouteBase get $onBoardingRoute => GoRouteData.$route(
+      path: '/onBoardingRoute',
+      factory: $OnBoardingRouteExtension._fromState,
+    );
+
+extension $OnBoardingRouteExtension on OnBoardingRoute {
+  static OnBoardingRoute _fromState(GoRouterState state) => OnBoardingRoute();
+
+  String get location => GoRouteData.$location(
+        '/onBoardingRoute',
       );
 
   void go(BuildContext context) => context.go(location);
